@@ -1,7 +1,7 @@
 package orm
 
 import (
-	"github.com/yanlong-li/HelloWorld-GO/io/logger"
+	"github.com/yanlong-li/hi-go-logger"
 	"reflect"
 )
 

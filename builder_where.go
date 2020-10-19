@@ -2,7 +2,7 @@ package orm
 
 import (
 	"fmt"
-	"github.com/yanlong-li/HelloWorld-GO/io/logger"
+	logger "github.com/yanlong-li/hi-go-logger"
 	"log"
 	"strings"
 )
