@@ -61,6 +61,12 @@ func Model(model interface{}) *builder {
 	return orm
 }
 
+//更新构造器
+func (_builder builder) TableName(tableName string) builder {
+	_builder.table = tableName
+	return _builder
+}
+
 func (_builder *builder) modelFillArgs(fillSql bool) {
 
 	p := reflect.ValueOf(_builder.model).Elem()
