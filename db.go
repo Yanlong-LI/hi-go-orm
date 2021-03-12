@@ -2,16 +2,20 @@ package orm
 
 import (
 	"database/sql"
-	"log"
+	logger "github.com/yanlong-li/hi-go-logger"
 )
 
 var db *sql.DB
 
 //ConfigDb 配置数据库
 func ConfigDb(driverName, dsn string) {
-	_db, err := sql.Open(driverName, dsn)
+	var err error
+	db, err = sql.Open(driverName, dsn)
 	if err != nil {
-		log.Panic(err)
+		logger.Warning("sql open fail.", 0, err)
 	}
-	db = _db
+}
+
+func GetDb() *sql.DB {
+	return db
 }
